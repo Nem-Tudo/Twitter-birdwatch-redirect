@@ -9,7 +9,7 @@ export async function getServerSideProps(context) {
     return {
         redirect: {
             permanent: true,
-            destination: "https://twitter.com/i/birdwatch/" + tweetID
+            destination: "https://twitter.com/i/birdwatch/t/" + tweetID
         }
     }
 }
