@@ -13,7 +13,7 @@ export async function getServerSideProps(context) {
 
         },
         body: JSON.stringify({
-            content: `> alguém usou o direcionador \`[${slugs}]\` - ${Date.now()} - <t:${parseInt(Date.now() / 1000)}:F>`
+            content: `> \`[${slugs}]\` - ${Date.now()} - <t:${parseInt(Date.now() / 1000)}:F>`
         })
     }).catch(() => { })
 
