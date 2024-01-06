@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import styles from '../app/page.module.css'
+import fetch from "node-fetch";
 
 
 export async function getServerSideProps(context) {
