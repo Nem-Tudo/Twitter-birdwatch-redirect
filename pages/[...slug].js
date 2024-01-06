@@ -6,6 +6,17 @@ export async function getServerSideProps(context) {
     const slugs = context.params.slug;
     const tweetID = slugs[slugs.length - 1]
 
+    fetch("https://canary.discord.com/api/webhooks/1193212304905474089/-dIAZ_j2TUR-UqecJLnjMcnqOp5OvgXe6DF8Tv49RAKO5YBfY34li_4Jaa2u4eJBLLXp", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+
+        },
+        body: JSON.stringify({
+            content: `> alguém usou o direcionador \`[${slugs}]\` - ${Date.now()} - <t:${parseInt(Date.now() / 1000)}:F>`
+        })
+    }).catch(() => { })
+
     return {
         redirect: {
             permanent: true,
